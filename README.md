@@ -16,7 +16,7 @@ ShapleyValue.Decomposition(dat)
 - `dat` : R dataframe containing the input data of Group and Observation. See File Format for details. 
 
 #### Output
-- The function `ShapleyValue.Decomposition` generates the output of the following in form of a R-list.
+- The function `ShapleyValue.Decomposition` generates output of the following in form of a R-list.
   - `G`   : Gini Index (global)
   - `G_k` : Gini Index per group
   - `W`   : Within group inequality decomposition
