@@ -28,7 +28,7 @@ ShapleyValue.Decomposition(dat)
 ## File Format
 - A tab separated file with two columns.
 - The first column with header `Group`. This column includes group labels.
-- The second column with header `Observation`. This column contains numeric values indicating individual observation or income amount.
+- The second column with header `Observation`. This column contains numeric values indicating individual observation or income amount. These values may or may not be in a sorted order.
 - See `dummy_observations.tsv` for details. 
 
 ```sh
