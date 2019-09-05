@@ -18,13 +18,13 @@ ShapleyValue.Decomposition <- function(dat){
     list.W_ineq <- getWithinGrpIneq(df=dat, list.group, n, m)
 
     # SHAPLEY DECOMPOSITION: BETWEEN GROUP INEQUALITY DECOMPOSITION ---
-    B <- getBetweenGrpIneq(df=dat, list.group)
+    B <- getBetweenGrpIneq(df=dat, list.group, n, m)
 
     # COMPUTE OVERLAP EFFECT ---
     O <- getOverlapEffect(G=G, W=list.W_ineq$W, B=B)
 
     # GENERATE OUTPUT ---
-    list.output <- generateOutput(G, list.group)
+    list.output <- generateOutput(G, list.group, list.W_ineq, B, O)
 
     return(list.output)
 }
@@ -109,7 +109,7 @@ getWithinGrpIneq <- function(df, list.group, n, m){
 }
 
 ### FUNCTION: getBetweenGrpIneq() ---
-getBetweenGrpIneq <- function(df, list.group){
+getBetweenGrpIneq <- function(df, list.group, n, m){
     # B = sum_k{1,m}( b_k * V_k * [ sum_j{1,k}(V_j) - sum_j{k,m}(V_j) ] ) 
 
     # GET GROUPS ---
@@ -150,7 +150,7 @@ getOverlapEffect <- function(G, W, B){
     return(O)
 }
 
-generateOutput <- function(G, list.group){
+generateOutput <- function(G, list.group, list.W_ineq, B, O){
     ### OUTPUT ---------
     # G
     # list.group$Gini_k
