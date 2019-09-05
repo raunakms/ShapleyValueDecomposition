@@ -3,8 +3,9 @@ This is script useful for Shapley Value Decomposition implemented in R. This scr
 
 ## Reference
 > Anthony F. Shorrock. *Decomposition procedures for distributional analysis: a unified framework based on the Shapley value.* J Econ Inequal (2013) 11:99–126. [DOI: 10.1007/s10888-011-9214-z](https://link.springer.com/article/10.1007%2Fs10888-011-9214-z)
+<br/><br/>
 
-### Usage
+## Usage
 - See `run_demo_script.R` for details.
 
 ```sh
@@ -22,6 +23,7 @@ ShapleyValue.Decomposition(dat)
   - `W_k` : Within group inequality per group
   - `B`   : Between group inequality decomposition
   - `O`   : Overlap Effect
+<br/><br/>
 
 ### File Format
 - A tab separated file with two columns.
