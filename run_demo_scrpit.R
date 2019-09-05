@@ -10,4 +10,4 @@ dat <- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
 
 ### RUN SHAPLEY VALUE DECOMPOSITON ---
 source(file.function)
-ShapleyValue.Decomposition(dat)
+ShapleyValue.Decomposition(dat=dat)
