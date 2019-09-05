@@ -25,7 +25,7 @@ ShapleyValue.Decomposition(dat)
   - `O`   : Overlap Effect
 <br/><br/>
 
-### File Format
+## File Format
 - A tab separated file with two columns.
 - The first column with header `Group`. This column includes group labels.
 - The second column with header `Observation`. This column contains numeric values indicating individual observation or income amount.
