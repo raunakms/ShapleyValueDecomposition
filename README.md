@@ -18,7 +18,7 @@ ShapleyValue.Decomposition(dat)
 
 # PARALLELIZED MODE ---
 source("ShapleyValueDecomposition_parallel.R")
-ShapleyValue.Decomposition.parallel(dat=dat, n_cores=4)
+ShapleyValue.Decomposition.parallel(dat, n_cores=4)
 ```
 #### Input parameter
 - `dat` : R dataframe containing the input data of Group and Observation. See File Format for details.
