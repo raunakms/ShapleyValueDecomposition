@@ -6,14 +6,23 @@ This is script useful for Shapley Value Decomposition implemented in R. This scr
 <br/><br/>
 
 ## Usage
+- Shapley Value Decomposition runs in two modes 
+  - **Un-parallelized mode** uses `ShapleyValue.Decomposition()` function. This is suitable for a small dataset and 
+  - **Parallelized mode** uses `ShapleyValue.Decomposition.parallel()` function. This is most suitable for a large dataset. It dependes on `foreach` and `doParallel` R-packages.
 - See `run_demo_script.R` for details.
 
 ```sh
+# UN-PARALLELIZED MODE ---
 source("ShapleyValueDecomposition.R")
 ShapleyValue.Decomposition(dat)
+
+# PARALLELIZED MODE ---
+source("ShapleyValueDecomposition_parallel.R")
+ShapleyValue.Decomposition.parallel(dat=dat, n_cores=4)
 ```
 #### Input parameter
-- `dat` : R dataframe containing the input data of Group and Observation. See File Format for details. 
+- `dat` : R dataframe containing the input data of Group and Observation. See File Format for details.
+- `n_cores` : The number of cores to use for parallel execution. 
 
 #### Output
 - The function `ShapleyValue.Decomposition` generates output of the following in form of a R-list.
